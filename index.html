@@ -1,0 +1,597 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#cardencoder'
+                  class="">
+                  cardEncoder
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cardsencoder'
+                  class="">
+                  cardsEncoder
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#card_not_present'
+                  class="">
+                  CARD_NOT_PRESENT
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cardencoderencode'
+                  class="">
+                  CardEncoder.encode
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cardencoderdecode'
+                  class="">
+                  CardEncoder.decode
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cardsencoderencode'
+                  class="">
+                  CardsEncoder.encode
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#cardsencoderdecode'
+                  class="">
+                  CardsEncoder.decode
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cardencoder'>
+      cardEncoder
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a encoder that encodes/decodes one card.</p>
+
+
+  <div class='pre p1 fill-light mt0'>cardEncoder</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>idx</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?
+            = <code>0</code>)</code>
+	    index in the bits at which the encoded card is located
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>CardEncoder</code>:
+        a card encoder with 
+<code>encode(String card)</code>
+ and 
+<code>decode(Number bits)</code>
+ methods
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cardsencoder'>
+      cardsEncoder
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a encoder that encodes/decodes a specific number of cards.</p>
+
+
+  <div class='pre p1 fill-light mt0'>cardsEncoder</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    the number of cards to encode/decode
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>idx</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>?
+            = <code>0</code>)</code>
+	    index in the bits at which the encoded cards are located
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>CardsEncoder</code>:
+        a card encoder with 
+<code>encode(String cards)</code>
+ and 
+<code>decode(Number bits)</code>
+ methods
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='card_not_present'>
+      CARD_NOT_PRESENT
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A 2 char string indicating a <em>non present</em> card as <code>'??'</code>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>CARD_NOT_PRESENT</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cardencoderencode'>
+      CardEncoder.encode
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Encodes a card.</p>
+<p>The idx is taken into account so that an <code>|</code> operation allows including
+the encoded information into existing bits.</p>
+
+
+  <div class='pre p1 fill-light mt0'>CardEncoder.encode</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>card</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    the card to encode
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:
+        the bits representing that card
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cardencoderdecode'>
+      CardEncoder.decode
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Decodes a card.</p>
+<p>The idx is taken into account so that the card can be decoded from within
+anywhere inside the given bits.</p>
+
+
+  <div class='pre p1 fill-light mt0'>CardEncoder.decode</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>allBits</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    the bits in which a card is encoded
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        the decoded card
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cardsencoderencode'>
+      CardsEncoder.encode
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Encodes a number of cards.</p>
+<p>The idx is taken into account so that an <code>|</code> operation allows including
+the encoded information into existing bits.</p>
+
+
+  <div class='pre p1 fill-light mt0'>CardsEncoder.encode</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cards</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>>)</code>
+	    the cards to encode
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:
+        the bits representing the cards
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='cardsencoderdecode'>
+      CardsEncoder.decode
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Encodes a number of cards.</p>
+<p>The idx is taken into account so that an <code>|</code> operation allows including
+the encoded information into existing bits.</p>
+
+
+  <div class='pre p1 fill-light mt0'>CardsEncoder.decode</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>allBits</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    the bits in which the cards are encoded
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>></code>:
+        the decoded cards
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
